@@ -13,19 +13,20 @@ export type Todo = {
 const TodoList = () => {
 	const { data: todos, isLoading } = useQuery<Todo[]>({
 		queryKey: ["todos"],
-		queryFn: async () => {
-			try {
-				const res = await fetch(BASE_URL + "/todos");
-				const data = await res.json();
+queryFn: async () => {
+  try {
+    const res = await fetch(BASE_URL + "/todos");
+    const data = await res.json();
 
-				if (!res.ok) {
-					throw new Error(data.error || "Something went wrong");
-				}
-				return data || [];
-			} catch (error) {
-				console.log(error);
-			}
-		},
+    if (!res.ok) {
+      throw new Error(data.error || "Something went wrong");
+    }
+    return data || [];
+  } catch (error) {
+    console.log(error);
+    return []; // Return an empty array when an error occurs
+  }
+}
 	});
 
 	return (
