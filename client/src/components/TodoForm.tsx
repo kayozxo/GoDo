@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Button, Flex, Input, Spinner } from "@chakra-ui/react";
+import { Button, Container, Flex, Input, Spinner } from "@chakra-ui/react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { IoMdAdd } from "react-icons/io";
@@ -43,6 +43,7 @@ const TodoForm = () => {
 	});
 
 	return (
+		<Container maxW={"900px"}>
 		<form onSubmit={createTodo}>
 			<Flex gap={2}>
 				<Input
@@ -62,6 +63,7 @@ const TodoForm = () => {
 				</Button>
 			</Flex>
 		</form>
+		</Container>
 	);
 };
 export default TodoForm;

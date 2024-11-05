@@ -57,13 +57,13 @@ const TodoItem = ({ todo }: { todo: Todo }) => {
 				flex={1}
 				alignItems={"center"}
 				border={"1px"}
-				borderColor={"gray.600"}
+				borderColor={"gray.400"}
 				p={2}
-				borderRadius={"lg"}
+				borderRadius={"md"}
 				justifyContent={"space-between"}
 			>
 				<Text
-					color={todo.completed ? "green.200" : "yellow.100"}
+					color={todo.completed ? "gray.400" : "green.400"}
 					textDecoration={todo.completed ? "line-through" : "none"}
 				>
 					{todo.body}

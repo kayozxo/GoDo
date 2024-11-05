@@ -1,4 +1,4 @@
-import { Flex, Spinner, Stack, Text } from "@chakra-ui/react";
+import { Container, Flex, Spinner, Stack, Text } from "@chakra-ui/react";
 
 import { useQuery } from "@tanstack/react-query";
 import { BASE_URL } from "../App";
@@ -31,6 +31,7 @@ queryFn: async () => {
 
 	return (
 		<>
+			<Container maxW={"900px"}>
 			<Text
 				fontSize={"4xl"}
 				textTransform={"uppercase"}
@@ -50,7 +51,7 @@ queryFn: async () => {
 			{!isLoading && todos?.length === 0 && (
 				<Stack alignItems={"center"} gap='3'>
 					<Text fontSize={"xl"} textAlign={"center"} color={"gray.500"}>
-						All tasks completed! 🤞
+						All tasks completed! 🎉
 					</Text>
 					<img src='/go.png' alt='Go logo' width={70} height={70} />
 				</Stack>
@@ -60,6 +61,8 @@ queryFn: async () => {
 					<TodoItem key={todo._id} todo={todo} />
 				))}
 			</Stack>
+			</Container>
+
 		</>
 	);
 };
