@@ -1,13 +1,13 @@
 import { Box, Button, Container, Flex, Text } from "@chakra-ui/react";
 import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
-import { useColorMode, useColorModeValue } from './ui/color-mode';
+import { useColorMode } from './ui/color-mode';
 export default function Navbar() {
 	const { colorMode, toggleColorMode } = useColorMode();
 
 	return (
 		<Container maxW={"900px"}>
-			<Box bg={useColorModeValue("gray.200", "gray.700")} px={4} my={4} borderRadius={"md"}>
+			<Box px={4} my={4} borderRadius={"md"} borderWidth={1}>
 				<Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
 					{/* LEFT SIDE */}
 					<Flex
@@ -15,7 +15,8 @@ export default function Navbar() {
 						alignItems={"center"}
 						gap={3}
 					>
-					<Text fontSize={"lg"} fontWeight={800}>
+						<img src='/go.png' alt='logo' width={30} height={30} />
+					<Text fontSize={"xl"} fontWeight={800}>
 							Daily Tasks
 						</Text>
 					</Flex>

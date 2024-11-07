@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Button, Container, Flex, Input, Spinner } from "@chakra-ui/react";
+import { Box, Button, Container, Field, Flex, Input, Spinner, defineStyle } from "@chakra-ui/react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { IoMdAdd } from "react-icons/io";
@@ -46,12 +46,15 @@ const TodoForm = () => {
 		<Container maxW={"900px"}>
 		<form onSubmit={createTodo}>
 			<Flex gap={2}>
-				<Input
-					type='text'
+<Field.Root>
+      <Box pos="relative" w="full">
+        <Input className="peer" placeholder="" type='text'
 					value={newTodo}
 					onChange={(e) => setNewTodo(e.target.value)}
-					ref={(input) => input && input.focus()}
-				/>
+					ref={(input) => input && input.focus()}/>
+        <Field.Label css={floatingStyles}>Enter new todo</Field.Label>
+      </Box>
+    </Field.Root>
 				<Button
 					mx={2}
 					type='submit'
@@ -68,40 +71,23 @@ const TodoForm = () => {
 };
 export default TodoForm;
 
-// STARTER CODE:
-
-// import { Button, Flex, Input, Spinner } from "@chakra-ui/react";
-// import { useState } from "react";
-// import { IoMdAdd } from "react-icons/io";
-
-// const TodoForm = () => {
-// 	const [newTodo, setNewTodo] = useState("");
-// 	const [isPending, setIsPending] = useState(false);
-
-// 	const createTodo = async (e: React.FormEvent) => {
-// 		e.preventDefault();
-// 		alert("Todo added!");
-// 	};
-// 	return (
-// 		<form onSubmit={createTodo}>
-// 			<Flex gap={2}>
-// 				<Input
-// 					type='text'
-// 					value={newTodo}
-// 					onChange={(e) => setNewTodo(e.target.value)}
-// 					ref={(input) => input && input.focus()}
-// 				/>
-// 				<Button
-// 					mx={2}
-// 					type='submit'
-// 					_active={{
-// 						transform: "scale(.97)",
-// 					}}
-// 				>
-// 					{isPending ? <Spinner size={"xs"} /> : <IoMdAdd size={30} />}
-// 				</Button>
-// 			</Flex>
-// 		</form>
-// 	);
-// };
-// export default TodoForm;
+const floatingStyles = defineStyle({
+  pos: "absolute",
+  bg: "bg",
+  px: "0.5",
+  top: "-3",
+  insetStart: "2",
+  fontWeight: "normal",
+  pointerEvents: "none",
+  transition: "position",
+  _peerPlaceholderShown: {
+    color: "fg.muted",
+    top: "2.5",
+    insetStart: "3",
+  },
+  _peerFocusVisible: {
+    color: "fg",
+    top: "-3",
+    insetStart: "2",
+  },
+})
