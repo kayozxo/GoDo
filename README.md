@@ -1,0 +1,41 @@
+# GoDo
+
+================
+
+GoDo is a ToDo application built using GO Lang.
+
+## Table of Contents
+
+---
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+---
+
+This project is built using GO, React, TypeScript, and Vite.
+
+## Features
+
+---
+
+- React + TypeScript + Vite setup
+- Chakra UI components for styling and layout
+- React Query for data fetching and caching
+- MongoDB integration using Fiber and MongoDB Driver
+
+## Contributing
+
+---
+
+Contributions are welcome! Please submit a pull request with a clear description of the changes.
+
+## License
+
+---
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
