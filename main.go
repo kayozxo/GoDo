@@ -24,7 +24,7 @@ type Todo struct{
 var collection *mongo.Collection
 
 func main() {
-	fmt.Println("Hello World")
+	fmt.Println("Starting GoDo")
 
 	err := godotenv.Load(".env")
 	if err != nil {

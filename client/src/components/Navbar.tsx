@@ -17,7 +17,7 @@ export default function Navbar() {
 					>
 						<img src='/go.png' alt='logo' width={30} height={30} />
 					<Text fontSize={"xl"} fontWeight={800}>
-							Daily Tasks
+							GoDo
 						</Text>
 					</Flex>
 

@@ -14,7 +14,7 @@ This project is built using GO, React, TypeScript, and Vite.
 
 <div  align="center">
 <div>
-<img  src="client/public/Vite-React-TS.png"/>
+<img  src="client/public/GoDo-ToDo-on-Steroids.png"/>
 </div>
 </div>
 

@@ -52,7 +52,7 @@ const TodoForm = () => {
 					value={newTodo}
 					onChange={(e) => setNewTodo(e.target.value)}
 					ref={(input) => input && input.focus()}/>
-        <Field.Label css={floatingStyles}>Enter new todo</Field.Label>
+        <Field.Label css={floatingStyles}>Enter new GoDo</Field.Label>
       </Box>
     </Field.Root>
 				<Button
