@@ -12,6 +12,12 @@ GoDo is a ToDo application built using GO Lang.
 
 This project is built using GO, React, TypeScript, and Vite.
 
+<div  align="center">
+<div>
+<img  src="client/public/Vite-React-TS.png"/>
+</div>
+</div>
+
 ## Features
 
 - React + TypeScript + Vite setup
